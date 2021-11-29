@@ -1,0 +1,23 @@
+O Prototype possui uma maneira fácil e conveniente de replicar objetos existentes, ou seja ele reconstrói
+os objetos copiando todos os seus campos diretamente. Ao tentar fazer a clonagem diretamente você pode não
+ter sucesso pois, a abordagem direta não apenas acopla você às classes dos objetos que estão sendo clonados, 
+mas também não permite que você copie o conteúdo dos campos privados. O padrão Prototype permite realizar a 
+clonagem dentro do contexto da classe clonada, onde o acesso aos campos privados da classe não é restrito. 
+
+Pensando nisso implemente o seguinte cenário: objeto Page complexo usando o padrão Prototype. A classe Page 
+tem todos os seus atributos privados, sendo esses atributos primitivos e complexos, onde ambos devem ser 
+transportados para outro objeto clonado usando o padrão Prototype.
+
+class Livro{
+	- string : titulo;
+	- array: Page
+}
+ 
+class Page{
+	- string: Titulo
+- string: texto
+- Livro: livro
+- array: destaques
+- string: date
+}
+Por fim crie um objeto Page, adicione destaques a esse objeto page. Em seguida clone esse objeto e mostre ambos com print_r
